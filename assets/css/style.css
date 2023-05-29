@@ -1,0 +1,282 @@
+@font-face {
+  font-family: 'san_de_more';
+  src: url('../CSS/fonts/sandemore-regular-webfont.woff') format('woff');
+}
+*,
+*::after,
+*::before{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+scroll-behavior: smooth;
+}
+/* html{
+    color-scheme: light dark;
+} */
+body{
+    /* font-family: "Josefin sans", garamond, cursive; */
+    font-family: "san_de_more";
+    font-size: 23px;
+    line-height: 1.2;
+    /* background-color: #ffffff; */
+    color: #333;
+    margin: 0px auto 0px auto;
+    max-width: 950px;
+    padding: 0 20px;
+  }
+  
+header .logo-img{
+    z-index: 2;
+margin: 60px 0px;
+}
+.menu{
+    position: fixed;
+    top: 28px;
+    left: 30px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    font-size: 25px;
+    font-family: "san_de_more";
+    /* font-family: 'Josefin sans', garamond; */
+    align-items: center;
+    gap: 6px;
+}
+.toggler{
+    background-image: url(../Logo/wallhaven-od87xl_2112x1188.png);
+    background-size: cover;
+    min-height: 20px;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+}
+.open-btn{
+    transform:rotate(0deg);
+transition: all 0.5s ease;
+}
+.open-btn:hover{
+    transform:rotate(90deg);
+}
+.menu-links{
+    font-family: "san_de_more";
+    /* font-family: 'Josefin sans', garamond; */
+    background-color: #f9cfdf;
+width: 400px;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+transform: translateX(-100%);
+transition: all 0.5s ease;
+z-index: 3;
+border-top-right-radius: 60px;
+border-bottom-right-radius: 60px;
+}
+.to-open:hover .menu-links{
+transform: translateX(0%);
+}
+.menu-close{
+    border: none;
+background: transparent;
+padding: 25px;
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 30px;
+transform: scale(1);
+transition: all 0.4s;
+cursor: pointer;
+}
+.menu-close, .menu-icon:hover{
+transform: scale(1.1);
+}
+.nav-links{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 65px;
+}
+.nav-links a{
+    font-size: 32px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    transform: translateX(0px);
+    transition: all 0.5s ease;
+}
+.nav-links a:hover{
+    transform: translateX(20px);
+
+}
+ 
+.natural{
+margin: 84px 0px 300px 0px;
+    position: relative;
+    transition: .4s ease;
+}
+.well{
+    position: relative;
+    padding-left: 345px;
+    transition: .4s ease;
+}
+
+.n-img{
+    max-width: 700px;
+    transition: .5s ease;
+    border-radius: 50px;
+}
+
+.natural:hover .n-img{
+    transition: .4s ease;
+    transform: scale(0.8) rotate(5deg) translateX(90px);
+    opacity: 0.75;
+    border-radius: 50px;
+}
+.text{
+    position: absolute;
+top: 90px;
+right: 8px;
+line-height: 70px;
+font-size: 60px;
+font-weight: 700;
+max-width: 340px;
+transition: .5s ease;
+}
+.natural:hover .text{
+    transform: scale(1.15);
+}
+.w-img{
+    right: 0;
+    max-width: 100%;
+    transition: .5s ease;
+border-radius: 50px;
+}
+.w-texts{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-size: 60px;
+    font-weight: 700;
+    max-width: 450px;
+    z-index: 2;
+    transition: .5s ease;
+}
+ .w-texts p{
+    margin-top: 20px;
+    font-size: 23px;
+    line-height: 1.2;
+    font-weight: 300;
+ }
+ .well:hover .w-img{
+    transition: .4s ease;
+    transform: scale(0.8) rotate(-5deg) translateX(-90px);
+        opacity: 0.75;
+    border-radius: 50px;
+ }
+ .well:hover .w-texts{
+    transform: scale(1.15);
+ }
+.overlook{
+    position: relative;
+    background-image: url(../006-baker-and-brown/img/image_3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 500px;
+    margin-top: 300px;
+    margin-bottom: 150px;
+    display: grid;
+    place-content: center;
+}
+.overlook-text{
+    color: white;
+    transition: .4s ease;
+    font-size: 64px;
+}
+.overlook:hover .overlook-text{
+transform: scale(1.1);
+}
+.go-up{
+    position: absolute;
+    right: -250px;
+    bottom: 50px;
+    transition: .4s ease;
+    background-color: transparent;
+    animation:heartbeat 1.5s ease-in-out infinite both}
+
+ @keyframes heartbeat {
+    from {
+      transform: scale(1);
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      transform: scale(0.91);
+      animation-timing-function: ease-in;
+    }
+    17% {
+      transform: scale(0.98);
+      animation-timing-function: ease-out;
+    }
+    33% {
+      transform: scale(0.87);
+      animation-timing-function: ease-in;
+    }
+    45% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+  }
+  .go-up-btn{
+    position: relative;
+  }
+.go-up button{
+    border:1px solid black;
+    padding: 3px 8px;
+border-radius: 50%;
+font-size: 25px;
+}
+.go-up button a{
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .box2{
+    width: 400px;
+    height: 270px;
+    background-color: rgb(56, 16, 202);
+    display: grid;
+    place-content: center;
+transition: .4s ease;
+}
+.box2:hover{
+    transform: scale(0.8) rotate(-5deg) translateX(-90px);
+    opacity: 0.75;
+    cursor: pointer;
+    border-radius: 50px;
+} */
